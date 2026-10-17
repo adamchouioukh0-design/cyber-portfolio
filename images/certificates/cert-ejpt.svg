@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ejptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180B22"/>
+      <stop offset="50%" stop-color="#0E0714"/>
+      <stop offset="100%" stop-color="#05070A"/>
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7E22CE"/>
+    </linearGradient>
+    <pattern id="ejptGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#A855F7" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#ejptGrad)"/>
+  <rect width="800" height="500" rx="16" fill="url(#ejptGrid)"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="none" stroke="#A855F7" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- Crosshair Target Emblem -->
+  <g transform="translate(60, 60)">
+    <circle cx="45" cy="45" r="35" fill="#0B1324" stroke="url(#purpleGlow)" stroke-width="3"/>
+    <line x1="45" y1="0" x2="45" y2="90" stroke="#00FF9C" stroke-width="2"/>
+    <line x1="0" y1="45" x2="90" y2="45" stroke="#00FF9C" stroke-width="2"/>
+    <circle cx="45" cy="45" r="15" fill="none" stroke="#00D9FF" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Headers -->
+  <text x="180" y="90" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="4">INE SECURITY CREDENTIAL</text>
+  <text x="180" y="130" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="28" letter-spacing="1">eJPT - Junior Penetration Tester</text>
+  <text x="180" y="160" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="14">STATUS: IN PROGRESS // EXAM TRACK: HANDS-ON PRACTICAL</text>
+
+  <!-- Technical badges -->
+  <g transform="translate(60, 200)">
+    <rect width="160" height="35" rx="6" fill="#17102A" stroke="#A855F7" stroke-opacity="0.5"/>
+    <text x="80" y="22" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Metasploit Framework</text>
+
+    <rect x="180" width="160" height="35" rx="6" fill="#17102A" stroke="#00FF9C" stroke-opacity="0.5"/>
+    <text x="260" y="22" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Network Assessment</text>
+
+    <rect x="360" width="160" height="35" rx="6" fill="#17102A" stroke="#00D9FF" stroke-opacity="0.5"/>
+    <text x="440" y="22" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Web App Attacks</text>
+
+    <rect x="540" width="160" height="35" rx="6" fill="#17102A" stroke="#F43F5E" stroke-opacity="0.5"/>
+    <text x="620" y="22" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Host Exploitation</text>
+  </g>
+
+  <!-- Certificate metadata footer -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#1E293B" stroke-width="1"/>
+  <text x="60" y="420" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">ISSUED BY: INE Security (formerly eLearnSecurity)</text>
+  <text x="60" y="445" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">PRACTICAL BLACK-BOX / GREY-BOX AUDIT</text>
+  <text x="580" y="430" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">[IN PROGRESS TRACK]</text>
+</svg>

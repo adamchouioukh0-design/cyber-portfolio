@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyber101Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E172E"/>
+      <stop offset="50%" stop-color="#080E1C"/>
+      <stop offset="100%" stop-color="#03060C"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <pattern id="c101Grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#38BDF8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#cyber101Grad)"/>
+  <rect width="800" height="500" rx="16" fill="url(#c101Grid)"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="none" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="30" width="740" height="440" rx="8" fill="none" stroke="#00FF9C" stroke-opacity="0.15" stroke-dasharray="6 6"/>
+
+  <!-- Badge Emblem -->
+  <g transform="translate(60, 60)">
+    <circle cx="45" cy="45" r="35" fill="#101D38" stroke="url(#blueGlow)" stroke-width="3"/>
+    <text x="45" y="52" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="bold" text-anchor="middle">101</text>
+  </g>
+
+  <!-- Headers -->
+  <text x="180" y="85" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="4">TRYHACKME // DEFENSIVE &amp; OFFENSIVE PATH</text>
+  <text x="180" y="125" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="28" letter-spacing="1">Cybersecurity 101 Path</text>
+  <text x="180" y="155" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="13">AWARDED TO: ADAM CHOUIOUKH // ID: THM-2XRAKAPUUO</text>
+
+  <!-- Technical badges -->
+  <g transform="translate(60, 200)">
+    <rect width="160" height="36" rx="6" fill="#132345" stroke="#38BDF8" stroke-opacity="0.4"/>
+    <text x="80" y="23" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Threat Modeling</text>
+
+    <rect x="180" width="160" height="36" rx="6" fill="#132345" stroke="#00FF9C" stroke-opacity="0.4"/>
+    <text x="260" y="23" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Defense-in-Depth</text>
+
+    <rect x="360" width="160" height="36" rx="6" fill="#132345" stroke="#F59E0B" stroke-opacity="0.4"/>
+    <text x="440" y="23" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Endpoint Protection</text>
+
+    <rect x="540" width="160" height="36" rx="6" fill="#132345" stroke="#A855F7" stroke-opacity="0.4"/>
+    <text x="620" y="23" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Cryptography Basics</text>
+  </g>
+
+  <!-- Certificate metadata footer -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#1E293B" stroke-width="1"/>
+  <text x="60" y="420" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">ISSUER: TryHackMe Cyber Security Training Platform</text>
+  <text x="60" y="445" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">CERTIFICATE ID: THM-2XRAKAPUUO // VERIFIED AUTHENTIC</text>
+  <text x="560" y="430" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">[OFFICIAL CERTIFICATE]</text>
+</svg>
