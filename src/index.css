@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #05070a;
+    --neon-green: #00ff9c;
+    --neon-cyan: #00d9ff;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05070a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #16243b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00d9ff66;
+  }
+}
+
+/* Perspective Grid Pattern */
+.cyber-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 217, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.05) 1px, transparent 1px);
+}
+
+.cyber-grid-perspective {
+  perspective: 600px;
+  transform-style: preserve-3d;
+}
+
+.cyber-grid-plane {
+  transform: rotateX(60deg) translateY(-20%);
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 217, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Glassmorphism card */
+.cyber-card {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 217, 255, 0.15);
+}
+
+/* Cyber corner cuts */
+.cyber-corner {
+  clip-path: polygon(
+    0 12px,
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+}
+
+.cyber-corner-border {
+  position: relative;
+}
+.cyber-corner-border::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #00d9ff;
+  border-left: 2px solid #00d9ff;
+  pointer-events: none;
+}
+.cyber-corner-border::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #00ff9c;
+  border-right: 2px solid #00ff9c;
+  pointer-events: none;
+}
+
+/* Scanline overlay */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.3)
+  );
+  background-size: 100% 4px;
+}
+
+/* Glitch effect on hover */
+.glitch-text:hover {
+  text-shadow: 2px 0 #00d9ff, -2px 0 #00ff9c;
+}
+
+/* Glow dots */
+.glow-dot-cyan {
+  box-shadow: 0 0 8px #00d9ff, 0 0 16px #00d9ff66;
+}
+
+.glow-dot-green {
+  box-shadow: 0 0 8px #00ff9c, 0 0 16px #00ff9c66;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

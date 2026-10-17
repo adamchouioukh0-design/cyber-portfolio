@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="secPlusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E172A"/>
+      <stop offset="50%" stop-color="#070C14"/>
+      <stop offset="100%" stop-color="#05070A"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <pattern id="secGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00D9FF" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#secPlusGrad)"/>
+  <rect width="800" height="500" rx="16" fill="url(#secGrid)"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="none" stroke="#00D9FF" stroke-opacity="0.25" stroke-width="2"/>
+  <rect x="30" y="30" width="740" height="440" rx="8" fill="none" stroke="#F59E0B" stroke-opacity="0.15" stroke-dasharray="8 8"/>
+
+  <!-- CompTIA Shield Icon -->
+  <g transform="translate(60, 60)">
+    <path d="M 50 10 L 90 25 L 90 65 C 90 90, 50 110, 50 110 C 50 110, 10 90, 10 65 L 10 25 Z" fill="#0B1324" stroke="url(#goldAccent)" stroke-width="3"/>
+    <path d="M 35 60 L 45 70 L 68 45" fill="none" stroke="#00FF9C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Headers -->
+  <text x="180" y="90" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="4">COMPTIA CERTIFICATION VAULT</text>
+  <text x="180" y="130" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="28" letter-spacing="1">Security+ (SY0-701)</text>
+  <text x="180" y="160" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="14">STATUS: ACTIVE &amp; VERIFIED // CREDENTIAL_ID: COMP00102030405</text>
+
+  <!-- Technical badges -->
+  <g transform="translate(60, 200)">
+    <rect width="150" height="35" rx="6" fill="#131F37" stroke="#00D9FF" stroke-opacity="0.4"/>
+    <text x="75" y="22" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Network Security</text>
+
+    <rect x="170" width="160" height="35" rx="6" fill="#131F37" stroke="#00FF9C" stroke-opacity="0.4"/>
+    <text x="250" y="22" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Threat Assessment</text>
+
+    <rect x="350" width="160" height="35" rx="6" fill="#131F37" stroke="#F59E0B" stroke-opacity="0.4"/>
+    <text x="430" y="22" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Cryptography</text>
+
+    <rect x="530" width="150" height="35" rx="6" fill="#131F37" stroke="#A855F7" stroke-opacity="0.4"/>
+    <text x="605" y="22" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Risk Mitigation</text>
+  </g>
+
+  <!-- Certificate metadata footer -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#1E293B" stroke-width="1"/>
+  <text x="60" y="420" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">ISSUED BY: Computing Technology Industry Association</text>
+  <text x="60" y="445" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">DIGITAL VERIFICATION: SECURE CREDLY HASH RECORD</text>
+  <text x="580" y="430" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">[PLACEHOLDER PREVIEW]</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pcapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#030611"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#pcapGrad)"/>
+  <rect x="30" y="30" width="740" height="390" rx="10" fill="#0D1730" stroke="#00D9FF" stroke-opacity="0.3" stroke-width="1.5"/>
+  <path d="M 30 40 Q 30 30 40 30 L 760 30 Q 770 30 770 40 L 770 70 L 30 70 Z" fill="#132040"/>
+  <circle cx="55" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="50" r="5" fill="#10B981"/>
+  <text x="110" y="55" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12">tshark -r incident_capture.pcap -Y "http.request or dns" -T fields -e ip.src -e dns.qry.name</text>
+
+  <!-- Wireshark Packet List View Simulation -->
+  <g transform="translate(50, 90)">
+    <!-- Header row -->
+    <rect x="0" y="0" width="700" height="24" fill="#1A2B50"/>
+    <text x="10" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">NO.</text>
+    <text x="50" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">TIME</text>
+    <text x="130" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">SOURCE</text>
+    <text x="240" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">DESTINATION</text>
+    <text x="360" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">PROTO</text>
+    <text x="420" y="16" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">INFO</text>
+
+    <!-- Row 1: Suspicious DNS Query -->
+    <rect x="0" y="28" width="700" height="24" fill="#101D38"/>
+    <text x="10" y="44" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="10">001</text>
+    <text x="50" y="44" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">12.401</text>
+    <text x="130" y="44" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="10">192.168.1.105</text>
+    <text x="240" y="44" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">8.8.8.8</text>
+    <text x="360" y="44" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10">DNS</text>
+    <text x="420" y="44" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="10">Standard query A v3x9a10c81.c2-exfil.xyz</text>
+
+    <!-- Row 2: HTTP POST C2 Beacon (Highlighted in Red/Magenta) -->
+    <rect x="0" y="56" width="700" height="24" fill="#3B1226"/>
+    <text x="10" y="72" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">002</text>
+    <text x="50" y="72" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">12.420</text>
+    <text x="130" y="72" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">192.168.1.105</text>
+    <text x="240" y="72" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">185.220.101.4</text>
+    <text x="360" y="72" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">HTTP</text>
+    <text x="420" y="72" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">POST /api/v1/telemetry [SUSPICIOUS C2 BEACON]</text>
+
+    <!-- Row 3: TLS 1.3 -->
+    <rect x="0" y="84" width="700" height="24" fill="#101D38"/>
+    <text x="10" y="100" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="10">003</text>
+    <text x="50" y="100" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">12.480</text>
+    <text x="130" y="100" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="10">192.168.1.105</text>
+    <text x="240" y="100" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">142.250.190.46</text>
+    <text x="360" y="100" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="10">TLSv1.3</text>
+    <text x="420" y="100" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10">Application Data (Encrypted Handshake)</text>
+
+    <!-- Hex Dump Dissector at bottom -->
+    <g transform="translate(0, 125)">
+      <rect width="700" height="150" fill="#080E1C" rx="4" stroke="#1A2E50"/>
+      <text x="15" y="25" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">HEX PAYLOAD STREAM INSPECTION (POST /api/v1/telemetry):</text>
+      <text x="15" y="55" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">0000  50 4f 53 54 20 2f 61 70  69 2f 76 31 2f 74 65 6c  POST /api/v1/tel</text>
+      <text x="15" y="75" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">0010  65 6d 65 74 72 79 20 48  54 54 50 2f 31 2e 31 0d  emetry HTTP/1.1.</text>
+      <text x="15" y="95" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">0020  55 73 65 72 2d 41 67 65  6e 74 3a 20 43 6f 62 61  User-Agent: Coba</text>
+      <text x="15" y="115" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="10">0030  6c 74 53 74 72 69 6b 65  2f 34 2e 37 0d 0a 41 75  ltStrike/4.7..Au</text>
+      <text x="15" y="135" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="10">[EVIDENCE EXTRACTED: C2 BEACON USER-AGENT DETECTED &amp; REPORTED]</text>
+    </g>
+  </g>
+</svg>

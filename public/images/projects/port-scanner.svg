@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101E"/>
+      <stop offset="100%" stop-color="#03060A"/>
+    </linearGradient>
+    <radialGradient id="radarSweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF9C" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00FF9C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#scanGrad)"/>
+  
+  <!-- Terminal window container -->
+  <rect x="30" y="30" width="740" height="390" rx="10" fill="#0B1322" stroke="#00D9FF" stroke-opacity="0.3" stroke-width="1.5"/>
+  
+  <!-- Window Header -->
+  <path d="M 30 40 Q 30 30 40 30 L 760 30 Q 770 30 770 40 L 770 70 L 30 70 Z" fill="#0E1A2E"/>
+  <circle cx="55" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="50" r="5" fill="#10B981"/>
+  <text x="110" y="55" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="12">python3 ./scanner.py -t 192.168.1.0/24 -p 21,22,80,443,3306,8080 --threads 64</text>
+
+  <!-- Left: Port Matrix Radar -->
+  <g transform="translate(180, 240)">
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#00D9FF" stroke-opacity="0.15" stroke-width="1"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#00D9FF" stroke-opacity="0.25" stroke-width="1"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#00D9FF" stroke-opacity="0.35" stroke-width="1"/>
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="#00D9FF" stroke-opacity="0.2"/>
+    <line x1="0" y1="-120" x2="0" y2="120" stroke="#00D9FF" stroke-opacity="0.2"/>
+    <!-- Radar beam -->
+    <path d="M 0 0 L 85 -85 A 120 120 0 0 0 0 -120 Z" fill="url(#radarSweep)"/>
+    <!-- Blips for open ports -->
+    <circle cx="45" cy="-35" r="4" fill="#00FF9C" filter="drop-shadow(0 0 6px #00FF9C)"/>
+    <text x="55" y="-32" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="11">PORT 80: OPEN [HTTP/2.0]</text>
+    
+    <circle cx="-50" cy="40" r="4" fill="#00FF9C" filter="drop-shadow(0 0 6px #00FF9C)"/>
+    <text x="-160" y="45" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="11">PORT 443: OPEN [TLS 1.3]</text>
+
+    <circle cx="60" cy="60" r="4" fill="#00D9FF" filter="drop-shadow(0 0 6px #00D9FF)"/>
+    <text x="70" y="65" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="11">PORT 22: OPEN [OpenSSH 9.2]</text>
+  </g>
+
+  <!-- Right: Live Execution Log -->
+  <g transform="translate(420, 100)">
+    <text x="0" y="20" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12">[+] DISCOVERY ENGINE: THREAD_POOL_EXECUTOR ACTIVE</text>
+    <text x="0" y="50" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">[*] Target Subnet: 192.168.1.0/24 (254 Hosts)</text>
+    <text x="0" y="80" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12">[SUCCESS] 192.168.1.1   -&gt; Host Online (0.42ms)</text>
+    <text x="0" y="110" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12">[SUCCESS] 192.168.1.10  -&gt; Port 80/TCP  [Apache 2.4.58]</text>
+    <text x="0" y="140" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12">[SUCCESS] 192.168.1.10  -&gt; Port 443/TCP [SSL Cert Valid]</text>
+    <text x="0" y="170" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="12">[FILTERED] 192.168.1.15 -&gt; Port 21/TCP  [FTP RST-ACK]</text>
+    <text x="0" y="200" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12">[+] Scan Rate: 1,420 pkts/sec | Completed in 3.14s</text>
+    
+    <!-- Progress bar -->
+    <rect x="0" y="230" width="300" height="8" rx="4" fill="#131F37"/>
+    <rect x="0" y="230" width="280" height="8" rx="4" fill="#00FF9C"/>
+    <text x="0" y="260" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">EXPORT FORMAT: report_2026.json &amp; scan_matrix.csv</text>
+  </g>
+</svg>

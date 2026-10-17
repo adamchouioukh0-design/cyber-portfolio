@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dhcpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051C1A"/>
+      <stop offset="100%" stop-color="#020908"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#dhcpGrad)"/>
+  <rect x="30" y="30" width="740" height="390" rx="10" fill="#071918" stroke="#00FF9C" stroke-opacity="0.3" stroke-width="1.5"/>
+  <path d="M 30 40 Q 30 30 40 30 L 760 30 Q 770 30 770 40 L 770 70 L 30 70 Z" fill="#0C2624"/>
+  <circle cx="55" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="50" r="5" fill="#10B981"/>
+  <text x="110" y="55" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12">cisco-sw(config-if)# ip dhcp snooping trust &amp;&amp; ip helper-address 10.10.10.254</text>
+
+  <!-- Network Topology Layout -->
+  <g transform="translate(60, 110)">
+    <!-- VLAN 10 Client -->
+    <rect x="0" y="20" width="130" height="55" rx="6" fill="#0C2522" stroke="#00FF9C" stroke-width="1.2"/>
+    <text x="65" y="45" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">CLIENT (VLAN 10)</text>
+    <text x="65" y="62" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">DHCP Discover (BC)</text>
+
+    <!-- Switch with Snooping -->
+    <rect x="180" y="20" width="150" height="55" rx="6" fill="#0E2D2A" stroke="#00D9FF" stroke-width="1.5"/>
+    <text x="255" y="42" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">CISCO 2960 SWITCH</text>
+    <text x="255" y="60" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">DHCP Snooping + Opt 82</text>
+
+    <!-- Router Relay -->
+    <rect x="380" y="20" width="140" height="55" rx="6" fill="#0F332E" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="450" y="42" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">CORE ROUTER</text>
+    <text x="450" y="60" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">IP Helper Unicast Relay</text>
+
+    <!-- Linux DHCP Server -->
+    <rect x="560" y="20" width="140" height="55" rx="6" fill="#143F39" stroke="#10B981" stroke-width="1.5"/>
+    <text x="630" y="42" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">ISC-DHCP-SERVER</text>
+    <text x="630" y="60" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Scope Pool: 10.10.10.0/24</text>
+
+    <!-- Linking lines -->
+    <line x1="130" y1="47" x2="180" y2="47" stroke="#00FF9C" stroke-width="2"/>
+    <line x1="330" y1="47" x2="380" y2="47" stroke="#00D9FF" stroke-width="2"/>
+    <line x1="520" y1="47" x2="560" y2="47" stroke="#10B981" stroke-width="2"/>
+
+    <!-- DORA Packet Sequence Diagram below -->
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="580" height="130" rx="8" fill="#071E1C" stroke="#00FF9C" stroke-opacity="0.2"/>
+      <text x="20" y="30" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="11">[1] DISCOVER: Client 00:1A:2B:3C:4D:5E -&gt; 255.255.255.255:67 (UDP)</text>
+      <text x="20" y="55" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="11">[2] OFFER: ISC Server -&gt; Relay Giaddr 10.10.10.1 -&gt; Assigned 10.10.10.45</text>
+      <text x="20" y="80" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11">[3] REQUEST: Client accepts lease; requests Option 3 (GW) &amp; Option 6 (DNS)</text>
+      <text x="20" y="105" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">[4] ACK: Binding added to DHCP Snooping Database (Untrusted port protected)</text>
+    </g>
+  </g>
+</svg>

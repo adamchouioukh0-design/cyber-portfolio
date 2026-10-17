@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="osintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07192A"/>
+      <stop offset="50%" stop-color="#040D18"/>
+      <stop offset="100%" stop-color="#02070D"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <pattern id="osintGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#00D9FF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#osintGrad)"/>
+  <rect width="800" height="500" rx="16" fill="url(#osintGrid)"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="none" stroke="#00D9FF" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="30" width="740" height="440" rx="8" fill="none" stroke="#00FF9C" stroke-opacity="0.15" stroke-dasharray="6 6"/>
+
+  <!-- OSINT Target & Magnifier Emblem -->
+  <g transform="translate(60, 60)">
+    <circle cx="45" cy="45" r="35" fill="#0B1B2B" stroke="url(#cyanGlow)" stroke-width="3"/>
+    <circle cx="45" cy="45" r="22" fill="none" stroke="#00FF9C" stroke-width="2" stroke-dasharray="8 4"/>
+    <circle cx="45" cy="45" r="10" fill="#00D9FF" fill-opacity="0.6"/>
+    <!-- Crosshairs -->
+    <line x1="45" y1="5" x2="45" y2="85" stroke="#00D9FF" stroke-width="1.5"/>
+    <line x1="5" y1="45" x2="85" y2="45" stroke="#00D9FF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Headers -->
+  <text x="180" y="85" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="4">SECURITY BLUE TEAM // CREDENTIAL VAULT</text>
+  <text x="180" y="125" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="28" letter-spacing="1">Introduction to OSINT</text>
+  <text x="180" y="155" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="13">RECIPIENT: ADAM CHOUIOUKH // VERIFIED COMPLETION</text>
+
+  <!-- Technical badges -->
+  <g transform="translate(60, 200)">
+    <rect width="160" height="36" rx="6" fill="#0E2135" stroke="#00D9FF" stroke-opacity="0.4"/>
+    <text x="80" y="23" fill="#00D9FF" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Open Source Intel</text>
+
+    <rect x="180" width="160" height="36" rx="6" fill="#0E2135" stroke="#00FF9C" stroke-opacity="0.4"/>
+    <text x="260" y="23" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Domain Footprinting</text>
+
+    <rect x="360" width="160" height="36" rx="6" fill="#0E2135" stroke="#38BDF8" stroke-opacity="0.4"/>
+    <text x="440" y="23" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Social Reconnaissance</text>
+
+    <rect x="540" width="160" height="36" rx="6" fill="#0E2135" stroke="#A855F7" stroke-opacity="0.4"/>
+    <text x="620" y="23" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Threat Profiling</text>
+  </g>
+
+  <!-- Certificate metadata footer -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#1E293B" stroke-width="1"/>
+  <text x="60" y="420" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">ISSUER: Security Blue Team Academy</text>
+  <text x="60" y="445" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12">VERIFIED PDF ATTACHED // CLICK TO VIEW FULL DOCUMENT</text>
+  <text x="560" y="430" fill="#00FF9C" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">[OFFICIAL CERTIFICATE]</text>
+</svg>
