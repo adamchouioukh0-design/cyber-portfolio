@@ -17,11 +17,7 @@ export const personalInfo: PersonalInfo = {
   shortIntro: "Executing active reconnaissance, vulnerability exploitation, and applied cryptography to audit, challenge, and fortify enterprise perimeters.",
   
   // Real photo from user's Desktop
-<<<<<<< HEAD
   profileImage: `${import.meta.env.BASE_URL}images/profile.png`,
-=======
-  profileImage: "images/profile.png",
->>>>>>> 2023aef74587bde25f4891e89df118fedbc5f57b
   
   // Link to your resume/CV
   cvUrl: "#contact",
@@ -310,7 +306,7 @@ export const certificatesData: Certificate[] = [
     issueDate: "Verified Credential",
     credentialId: "SBT-OSINT-COURSE",
     image: `${import.meta.env.BASE_URL}images/certificates/cert-osint.svg`,
-    pdfUrl: "/certificates/Introduction-to-OSINT-course.pdf",
+    pdfUrl: `${import.meta.env.BASE_URL}certificates/Introduction-to-OSINT-course.pdf`,
     description: "Comprehensive Open Source Intelligence training covering digital investigation methodologies, geolocation, advanced search operators, domain footprinting, and deep-web target profiling.",
     skills: ["OSINT Reconnaissance", "Domain Footprinting", "Social Media Forensics", "Data Verification", "Threat Mapping"],
     status: "VERIFIED",
@@ -324,7 +320,7 @@ export const certificatesData: Certificate[] = [
     credentialId: "THM-DLZQB64DET",
     verificationUrl: "https://tryhackme.com",
     image: `${import.meta.env.BASE_URL}images/certificates/cert-thm-aoc.svg`,
-    pdfUrl: "/certificates/THM-Advent-of-Cyber-2025.pdf",
+    pdfUrl: `${import.meta.env.BASE_URL}certificates/THM-Advent-of-Cyber-2025.pdf`,
     description: "Intensive 24-day practical hands-on offensive & defensive cybersecurity challenge tackling web exploitation, memory forensics, network sniffing, reverse engineering, and threat detection.",
     skills: ["Web Exploitation", "Network Forensics", "Log Analysis", "Threat Detection", "Privilege Escalation"],
     status: "VERIFIED",
@@ -338,7 +334,7 @@ export const certificatesData: Certificate[] = [
     credentialId: "THM-WCF5XJSZJO",
     verificationUrl: "https://tryhackme.com",
     image: `${import.meta.env.BASE_URL}images/certificates/cert-thm-presec.svg`,
-    pdfUrl: "/certificates/THM-Pre-Security.pdf",
+    pdfUrl: `${import.meta.env.BASE_URL}certificates/THM-Pre-Security.pdf`,
     description: "Foundational cybersecurity curriculum mastering TCP/IP networking, OSI model layers, web application fundamentals, Linux command line security, and Windows system architecture.",
     skills: ["TCP/IP Protocols", "OSI Model", "Web App Architecture", "Linux OS Internals", "Networking"],
     status: "VERIFIED",
@@ -352,7 +348,7 @@ export const certificatesData: Certificate[] = [
     credentialId: "THM-2XRAKAPUUO",
     verificationUrl: "https://tryhackme.com",
     image: `${import.meta.env.BASE_URL}images/certificates/cert-thm-cyber101.svg`,
-    pdfUrl: "/certificates/THM-Cybersecurity-101.pdf",
+    pdfUrl: `${import.meta.env.BASE_URL}certificates/THM-Cybersecurity-101.pdf`,
     description: "Core cybersecurity learning path covering defense-in-depth principles, threat modeling, security governance, endpoint defense, network security architecture, and cryptography.",
     skills: ["Defense in Depth", "Threat Modeling", "Endpoint Protection", "Network Security", "Cryptography"],
     status: "VERIFIED",
@@ -366,7 +362,7 @@ export const certificatesData: Certificate[] = [
     credentialId: "V19VIE1BG3CJ",
     verificationUrl: "https://coursera.org/verify/V19VIE1BG3CJ",
     image: `${import.meta.env.BASE_URL}images/certificates/cert-stanford-crypto.jpg`,
-    pdfUrl: "/certificates/Stanford-Cryptography-1.jpg",
+    pdfUrl: `${import.meta.env.BASE_URL}certificates/Stanford-Cryptography-1.jpg`,
     description: "Rigorous academic cryptography course taught by Prof. Dan Boneh covering symmetric encryption (AES/DES), message authentication codes (HMAC), public key cryptography (RSA, ElGamal, Diffie-Hellman), and cryptanalysis.",
     skills: ["Symmetric Ciphers (AES/CBC)", "HMAC Authentication", "Public Key Cryptography", "RSA & Diffie-Hellman", "Cryptanalysis"],
     status: "VERIFIED",
@@ -444,7 +440,7 @@ export const projectsData: Project[] = [
     title: "DHCP Server & Relay Agent Lab",
     slug: "dhcp-server-relay-lab",
     category: "networking",
-    image: "/images/projects/dhcp-lab.svg",
+    image: `${import.meta.env.BASE_URL}images/projects/dhcp-lab.svg`,
     shortDescription: "Multi-VLAN DHCP architecture with Cisco router relay agents, option parameters, and DHCP snooping security controls.",
     problemAddressed: "Broadcast domains cannot naturally cross routers without relay agents, and unprotected DHCP infrastructure is highly vulnerable to rogue server and starvation attacks.",
     technicalImplementation: "Built a segmented network topology containing 3 separate VLANs. Implemented ISC-DHCP-Server on Linux, configured Cisco ip helper-address relay forwarding, and enabled DHCP Snooping with Option 82 insertion on switch trunks to drop untrusted offers.",
@@ -465,7 +461,7 @@ export const projectsData: Project[] = [
     title: "Network Traffic Analysis with Wireshark",
     slug: "network-traffic-analysis-wireshark",
     category: "defensive",
-    image: "/images/projects/traffic-analysis.svg",
+    image: `${import.meta.env.BASE_URL}images/projects/traffic-analysis.svg`,
     shortDescription: "Comprehensive packet dissection lab investigating malware beaconing, cleartext credentials, and TCP anomalies in PCAP captures.",
     problemAddressed: "Encrypted traffic and high-volume packet streams conceal data exfiltration, command-and-control (C2) heartbeats, and lateral movement.",
     technicalImplementation: "Analyzed over 500MB of captured PCAP data using Wireshark and Tshark. Extracted HTTP payloads, reconstructed TCP sessions, isolated DNS tunneling attempts through entropy calculations, and built custom display filter profiles for SOC analysts.",
