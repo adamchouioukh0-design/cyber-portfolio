@@ -17,7 +17,7 @@ export const personalInfo: PersonalInfo = {
   shortIntro: "Executing active reconnaissance, vulnerability exploitation, and applied cryptography to audit, challenge, and fortify enterprise perimeters.",
   
   // Real photo from user's Desktop
-  profileImage: "public/images/profile.png",
+  profileImage: "images/profile.png",
   
   // Link to your resume/CV
   cvUrl: "#contact",
